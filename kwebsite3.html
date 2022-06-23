@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City-Bhopal</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /*for the bigger whole dabba*/
+    .container {
+        width: 100%;
+        background: red;
+        border: solid blue;
+        margin: 10px auto;
+        padding: 10px;
+        overflow: hidden; /*yahan hidden hata do toh red bg gayab ho jata */
+        display: flex;
+    }
+
+    /*for the overall list*/
+    .container ul {
+        border: 2px solid black;
+        padding: 0px;
+        margin: 10px auto;
+
+    }
+
+    /*for individual items*/
+    .container ul li {
+        border: 1px solid yellow;
+        list-style: none;
+        height: 250px;
+        width: 23%;
+        margin: 15px 11px;
+        float: left;
+        box-sizing: border-box;
+        overflow: hidden;
+        
+    }
+
+    .container ul li .name {
+        width: 100%;
+        background: lemonchiffon;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    /*.container ul li :hover {
+        opacity: 0.3;}*/
+    
+    /*.container ul li img :hover{
+            }*/
+
+    @media screen and (max-width:1000px) {
+        .container ul li {
+            width: 40%;
+        }
+    }
+    
+    /*.container ul li img {
+        overflow: hidden;
+    }*/
+    
+    .name img{
+   
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        
+        
+}
+.name{
+    position: relative;
+    width: 23%;
+    height: auto;
+   /* overflow: hidden;*/ /*yahan hidden krne se img hi gayab ho jaati h*/
+  
+}
+
+/* for the caption of each img*/
+.content {
+    position: absolute;
+    top:0px;
+    left: -100%;
+    height: 827%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    background: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*yahan overflow hidden krne se koi difference hi nhi aata*/
+    color: blanchedalmond;
+    
+}
+
+.name:hover .content{
+    left:0;
+    opacity: 0.8;
+}
+.filters{
+    font-size: 30px;
+color: rgb(8, 129, 24);
+display: inline;
+text-shadow: 1px 1px 1px black;
+}
+.btn {
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 20px;
+}
+.btn:hover {
+    background-color: rgb(175, 226, 250);
+
+}
+
+    
+</style>
+
+<body>
+    <div class="filters">Filter by choice: 
+           <button class="btn"> Business visit </button>
+                   <button class="btn">Personal visit</button> 
+                   <button class="btn">Pilgrimage</button>     
+              <button class="btn"> Economic</button>
+              <button class="btn"> Fancy</button>      
+
+        </div>
+ </div>
+
+<div class="container">
+        <ul>
+            <li>
+        
+                <div class="name">name
+                    <img src="food.jpeg" alt="1">
+                    <div class="content">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <button class="btn">Read More</button>
+                    
+                </div>
+
+            </div> </li>
+
+
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div> </li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div> </li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+            <li>
+                <div class="name">name</div></li>
+        </ul>
+ </div>
+</body>
+
+</html>

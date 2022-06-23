@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .column {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .column {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .column {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+	text-align: center;
+}
+
+.title h1 {
+  font-size: 25px;
+	color: #000000;
+}
+
+.credit {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.credit a {
+	font-weight: 900;
+	color: #000000;
+	text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/********** Effect #1 CSS *********/
+.effect-1 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-1 .effect-img {
+  font-size: 0;
+}
+
+.effect-1 .effect-img img {
+  width: 100%;
+  height: auto;
+}
+
+.effect-1 .effect-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  top: calc(100% - 60px);
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.effect-1:hover .effect-text {
+  top: 0;
+}
+
+.effect-1 .effect-text h2 {
+  height: 45px;
+  color: #ffffff;
+  font-size: 25px;
+  margin: -15px 0 0 0;
+  transition: .5s;
+}
+
+.effect-1:hover .effect-text h2 {
+  margin: 0;
+}
+
+.effect-1 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-1 .effect-btn .btn {
+  display: inline-block;
+  height: 35px;
+  padding: 7px 15px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+/********** Effect #2 CSS *********/
+.effect-2 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-2 .effect-img {
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.effect-2 .effect-img img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform: scale(1.2);
+  bottom: -25px;
+  transition: .5s;
+}
+
+.effect-2:hover .effect-img img {
+  bottom: 0;
+}
+
+.effect-2 .effect-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .2);
+  opacity: 0;
+  transition: .5s;
+}
+
+.effect-2:hover .effect-text {
+  top: 0;
+  opacity: 1;
+}
+
+.effect-2 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-2 .effect-btn {
+  position: absolute;
+  width: 100%;
+  padding: 15px 7.5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.effect-2 .effect-text h2 {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  float: left;
+  margin: 5px 7.5px 0 7.5px;
+}
+
+.effect-2 .effect-btn .btn {
+  position: relative;
+  display: inline-block;
+  float: right;
+  height: 35px;
+  padding: 7px 15px;
+  margin: 0 7.5px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+/********** Effect #3 CSS *********/
+.effect-3 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-3 .effect-img {
+  font-size: 0;
+  overflow: hidden;
+}
+
+.effect-3 .effect-img img {
+  width: 100%;
+  height: auto;
+  transition: .3s;
+}
+
+.effect-3:hover .effect-img img {
+  transform: scale(1.2);
+}
+
+.effect-3 .effect-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.effect-3:hover .effect-text {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.effect-3 .effect-text h2 {
+  height: 45px;
+  color: #ffffff;
+  font-size: 25px;
+  margin: 0;
+}
+
+.effect-3 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-3 .effect-btn .btn {
+  display: inline-block;
+  height: 35px;
+  padding: 7px 15px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container title">
+        <h1>CSS Image Hover Effects</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <div class="effect-1">
+              <div class="effect-img">
+                <img src="Beach-Wallpaper-1-scaled.jpg" alt="Image">
+              </div>
+              <div class="effect-text">
+                <h2>This is heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur, interdum felis in, auctor ligula.</p>
+                  <div class="effect-btn">
+                    <a class="btn" href="#">Read More</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="effect-2">
+              <div class="effect-img">
+                <img src="exotic-travel-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4khd-wallpapers-desktop-background-android-iphone-1080p-4k-qoxmm.jpg" alt="Image">
+              </div>
+              <div class="effect-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur, interdum felis in, auctor ligula.</p>
+                <div class="effect-btn">
+                  <h2>This is heading</h2>
+                  <a class="btn" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
